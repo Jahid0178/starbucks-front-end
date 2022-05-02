@@ -41,7 +41,7 @@ export const Inventory = () => {
                 <th className="p-2 hidden sm:block">
                   <input type="checkbox" name="" id="" />
                 </th>
-                <th className="p-2 hidden sm:block">Date Updated</th>
+                <th className="p-2 hidden sm:inline-block">Date Updated</th>
                 <th className="p-2">Title</th>
                 <th className="p-2 hidden lg:block">Details</th>
                 <th className="p-2">Status</th>
