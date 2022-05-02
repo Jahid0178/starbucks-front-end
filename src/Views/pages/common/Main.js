@@ -9,7 +9,7 @@ import { SideNav } from "./SideNav";
 
 export const Main = () => {
   return (
-    <div className="container mx-auto px-2">
+    <div className="container mx-auto">
       <div className="grid grid-cols-[1fr] sm:grid-cols-[auto_4fr] gap-3">
         <div className="py-2 hidden sm:block">
           <SideNav />
