@@ -35,19 +35,19 @@ export const Inventory = () => {
           />
         </div>
         <div>
-          <table className="table w-full">
+          <table className="table table-auto w-full">
             <thead className="text-left">
               <tr className="bg-yellow-50">
-                <th className="p-2 hidden sm:block">
+                <th className="pl-2 hidden md:inline-block">
                   <input type="checkbox" name="" id="" />
                 </th>
-                <th className="p-2 hidden sm:inline-block">Date Updated</th>
+                <th className="p-2 hidden md:inline-block">Date Updated</th>
                 <th className="p-2">Title</th>
                 <th className="p-2 hidden lg:block">Details</th>
                 <th className="p-2">Status</th>
                 <th className="p-2">Quantity</th>
-                <th className="p-2 hidden lg:block">Unit Price</th>
-                <th className="p-2">Amount</th>
+                <th className="p-2 hidden md:block">Unit Price</th>
+                <th className="p-2 text-right">Amount</th>
               </tr>
             </thead>
             <tbody>
