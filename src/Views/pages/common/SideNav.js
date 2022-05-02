@@ -11,28 +11,31 @@ export const SideNav = () => {
       <div>
         <Link
           to="/dashboard"
-          className="block px-3 py-2 my-2 bg-white text-gray-600 rounded font-semibold hover:shadow hover:text-green-500"
+          className="block px-3 py-2 my-2  text-gray-600 rounded font-semibold hover:shadow hover:text-green-500 hover:bg-white"
         >
-          <RiHome2Line className="inline-block text-2xl mr-1" /> Dashboard
+          <RiHome2Line className="inline-block text-2xl mr-1" />{" "}
+          <span className="hidden md:inline-block">Dashboard</span>
         </Link>
         <Link
           to="/inventory"
-          className="block px-3 py-2 my-2 bg-white text-gray-600 rounded font-semibold hover:shadow hover:text-green-500"
+          className="block px-3 py-2 my-2  text-gray-600 rounded font-semibold hover:shadow hover:text-green-500 hover:bg-white"
         >
           <IoDocumentTextOutline className="inline-block text-2xl mr-1" />{" "}
-          Inventory
+          <span className="hidden md:inline-block">Inventory</span>
         </Link>
         <Link
           to="/documents"
-          className="block px-3 py-2 my-2 bg-white text-gray-600 rounded font-semibold hover:shadow hover:text-green-500"
+          className="block px-3 py-2 my-2  text-gray-600 rounded font-semibold hover:shadow hover:text-green-500 hover:bg-white"
         >
-          <TiDocumentText className="inline-block text-2xl mr-1" /> Documents
+          <TiDocumentText className="inline-block text-2xl mr-1" />{" "}
+          <span className="hidden md:inline-block">Documents</span>
         </Link>
         <Link
           to="/settings"
-          className="block px-3 py-2 my-2 bg-white text-gray-600 rounded font-semibold hover:shadow hover:text-green-500"
+          className="block px-3 py-2 my-2  text-gray-600 rounded font-semibold hover:shadow hover:text-green-500 hover:bg-white"
         >
-          <BsGear className="inline-block text-2xl mr-1" /> Setting
+          <BsGear className="inline-block text-2xl mr-1" />{" "}
+          <span className="hidden md:inline-block">Setting</span>
         </Link>
       </div>
     </div>

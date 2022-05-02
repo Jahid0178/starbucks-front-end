@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { Table } from "../../components/common/Table";
-import { AiOutlineArrowDown } from "react-icons/ai";
-import { BsArrowDownUp } from "react-icons/bs";
 import {
   IoMdArrowDropdown,
   IoIosArrowBack,
@@ -40,15 +38,15 @@ export const Inventory = () => {
           <table className="table w-full">
             <thead className="text-left">
               <tr className="bg-yellow-50">
-                <th className="p-2">
+                <th className="p-2 hidden sm:block">
                   <input type="checkbox" name="" id="" />
                 </th>
-                <th className="p-2">Date Updated</th>
+                <th className="p-2 hidden sm:block">Date Updated</th>
                 <th className="p-2">Title</th>
-                <th className="p-2">Details</th>
+                <th className="p-2 hidden lg:block">Details</th>
                 <th className="p-2">Status</th>
                 <th className="p-2">Quantity</th>
-                <th className="p-2">Unit Price</th>
+                <th className="p-2 hidden lg:block">Unit Price</th>
                 <th className="p-2">Amount</th>
               </tr>
             </thead>
@@ -60,7 +58,7 @@ export const Inventory = () => {
           </table>
           {/* Pagination area */}
           <div className="my-5 flex justify-between p-2">
-            <div>
+            <div className="hidden sm:block">
               <span className="secondary-btn">
                 10 Items per page <IoMdArrowDropdown className="inline-block" />
               </span>

@@ -5,14 +5,14 @@ export const Table = ({
   return (
     <>
       <tr className="hover:bg-green-100 cursor-pointer">
-        <td className="p-2">
+        <td className="p-2 hidden sm:block">
           <input type="checkbox" name="" id="" />
         </td>
-        <td className="p-2">{date}</td>
+        <td className="p-2 hidden sm:block">{date}</td>
         <td className="p-2">{title}</td>
-        <td className="p-2">{details}</td>
+        <td className="p-2 hidden lg:block">{details}</td>
         <td className="p-2">
-          {status}{" "}
+          <span className="hidden sm:block">{status}</span>{" "}
           <span
             className="ml-1"
             style={{
@@ -27,7 +27,7 @@ export const Table = ({
           ></span>{" "}
         </td>
         <td className="p-2">{quantity}</td>
-        <td className="p-2">${unitPrice}</td>
+        <td className="p-2 hidden lg:block">${unitPrice}</td>
         <td className="p-2 text-right">${amount}</td>
       </tr>
     </>

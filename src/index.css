@@ -23,6 +23,6 @@ body {
   }
 
   .secondary-btn {
-    @apply border border-slate-300 p-1 rounded
+    @apply border border-slate-300 p-1 rounded outline-none;
   }
 }
