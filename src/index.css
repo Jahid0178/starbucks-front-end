@@ -21,4 +21,8 @@ body {
   .search-input {
     @apply bg-slate-100 rounded-lg outline-none text-lg px-2 py-1;
   }
+
+  .secondary-btn {
+    @apply border border-slate-300 p-1 rounded
+  }
 }

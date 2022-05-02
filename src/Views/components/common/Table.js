@@ -1,28 +1,43 @@
 import React from "react";
-export const Table = (props) => {
-  const { date, title, details, status, quantity, unitPrice, amount } =
-    props.data;
-  if (status === "Alright") {
-    console.log("alright");
-  } else if (status === "In Progress") {
-    console.log("in progress");
-  } else {
-    console.log("out of stock");
-  }
+export const Table = ({
+  data: { date, title, details, status, quantity, unitPrice, amount },
+}) => {
   return (
-    <div>
-      <ul className="grid grid-cols-[auto_1fr_1fr_2fr_1fr_1fr_1fr_1fr] items-center hover:bg-green-100 cursor-pointer">
-        <li className="p-3">
+    <>
+      <tr className="hover:bg-green-100 cursor-pointer">
+        <td className="p-2">
           <input type="checkbox" name="" id="" />
-        </li>
-        <li className="p-2">{date}</li>
-        <li className="p-2">{title}</li>
-        <li className="p-2">{details}</li>
-        <li className="p-2">{status}</li>
-        <li className="p-2">{quantity}</li>
-        <li className="p-2">{unitPrice}</li>
-        <li className="p-2">{amount}</li>
-      </ul>
-    </div>
+        </td>
+        <td className="p-2">{date}</td>
+        <td className="p-2">{title}</td>
+        <td className="p-2">{details}</td>
+        <td className="p-2">
+          {status}{" "}
+          <span
+            className="ml-1"
+            style={{
+              ...statusIndicator,
+              backgroundColor:
+                status === "Alright"
+                  ? "#44C776"
+                  : status === "In Progress"
+                  ? "#F58A28"
+                  : "#F52828",
+            }}
+          ></span>{" "}
+        </td>
+        <td className="p-2">{quantity}</td>
+        <td className="p-2">${unitPrice}</td>
+        <td className="p-2 text-right">${amount}</td>
+      </tr>
+    </>
   );
+};
+
+let statusIndicator = {
+  width: "10px",
+  height: "10px",
+  background: "#000",
+  display: "inline-block",
+  borderRadius: "50%",
 };

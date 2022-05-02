@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { Table } from "../../components/common/Table";
+import { AiOutlineArrowDown } from "react-icons/ai";
+import { BsArrowDownUp } from "react-icons/bs";
+import {
+  IoMdArrowDropdown,
+  IoIosArrowBack,
+  IoIosArrowForward,
+} from "react-icons/io";
 
 export const Inventory = () => {
   const [submitData, setSubmitData] = useState([]);
@@ -30,25 +37,55 @@ export const Inventory = () => {
           />
         </div>
         <div>
-          <ul className="grid grid-cols-[auto_1fr_1fr_2fr_1fr_1fr_1fr_1fr] bg-orange-50">
-            <li className="p-3">
-              <input type="checkbox" name="" id="" />
-            </li>
-            <li className="p-2">Date Update</li>
-            <li className="p-2">Title</li>
-            <li className="p-2">Details</li>
-            <li className="p-2">Status</li>
-            <li className="p-2">Quantity</li>
-            <li className="p-2">Unit Price</li>
-            <li className="p-2">Amount</li>
-          </ul>
-          {submitData.map((data) => (
-            <Table key={data.id} data={data} />
-          ))}
+          <table className="table w-full">
+            <thead className="text-left">
+              <tr className="bg-yellow-50">
+                <th className="p-2">
+                  <input type="checkbox" name="" id="" />
+                </th>
+                <th className="p-2">Date Updated</th>
+                <th className="p-2">Title</th>
+                <th className="p-2">Details</th>
+                <th className="p-2">Status</th>
+                <th className="p-2">Quantity</th>
+                <th className="p-2">Unit Price</th>
+                <th className="p-2">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              {submitData.map((data) => (
+                <Table key={data.id} data={data} />
+              ))}
+            </tbody>
+          </table>
           {/* Pagination area */}
-          <div>
-            <div>1</div>
-            <div>2</div>
+          <div className="my-5 flex justify-between p-2">
+            <div>
+              <span className="secondary-btn">
+                10 Items per page <IoMdArrowDropdown className="inline-block" />
+              </span>
+            </div>
+            <div className="flex justify-between gap-3">
+              <div>
+                <select name="" id="" className="secondary-btn">
+                  <option value="">Page 1 of 5</option>
+                  <option value="">Page 2 of 5</option>
+                  <option value="">Page 3 of 5</option>
+                  <option value="">Page 4 of 5</option>
+                  <option value="">Page 5 of 5</option>
+                </select>
+              </div>
+              <div>
+                <button className="secondary-btn p-2">
+                  <IoIosArrowBack />
+                </button>
+              </div>
+              <div>
+                <button className="secondary-btn p-2">
+                  <IoIosArrowForward />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
