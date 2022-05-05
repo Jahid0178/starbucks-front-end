@@ -16,7 +16,7 @@ export const Main = () => {
         </div>
         <div className="py-2 border-0 sm:border-l-2 border-slate-300">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Inventory />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/inventory" element={<Inventory />} />
             <Route path="/documents" element={<Documents />} />
